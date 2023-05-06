@@ -4,7 +4,7 @@ namespace App\Command\AirQuality;
 
 use Minicli\Command\CommandController;
 
-class DefaultController extends CommandController
+final class DefaultController extends CommandController
 {
     public function handle(): void
     {
