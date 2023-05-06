@@ -39,6 +39,7 @@
     "test:lint": "pint --test --ansi",
     "test:types": "phpstan analyse --ansi",
     "test:mutation": "infection --min-msi=90 --min-covered-msi=90 --threads=max --ansi",
+    "test:coverage:clover": "pest --coverage-clover ./coverage.xml",
     "test:feature": "pest --testsuite=Feature",
     "test": [
       "@test:refactor",

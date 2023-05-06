@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        os: [ubuntu-latest]
+        os: [ubuntu-latest, macos-latest, windows-latest]
         php: [8.2]
         dependency-version: [prefer-stable]
 
@@ -48,14 +48,7 @@ jobs:
       run: composer update --${{ matrix.dependency-version }} --no-interaction --prefer-dist
 
     - name: PHPUnit Tests
-      uses: php-actions/phpunit@v3
-      env:
-        XDEBUG_MODE: coverage
-      with:
-        bootstrap: vendor/autoload.php
-        configuration: phpunit.xml
-        php_extensions: xdebug
-        args: tests --coverage-clover ./coverage.xml
+      run: composer test:coverage:clover
 
     - name: Running Mutation Testing
       run: composer test:mutation
