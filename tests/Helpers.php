@@ -5,13 +5,13 @@ use Minicli\Command\CommandCall;
 
 function getCommandsPath(): string
 {
-    return __DIR__ . '/../app/Command';
+    return __DIR__.'/../app/Command';
 }
 
 function getApp(): App
 {
     $config = [
-        'app_path' => getCommandsPath()
+        'app_path' => getCommandsPath(),
     ];
 
     return new App($config);
@@ -21,7 +21,7 @@ function getProdApp(): App
 {
     $config = [
         'app_path' => getCommandsPath(),
-        'debug' => false
+        'debug' => false,
     ];
 
     return new App($config);

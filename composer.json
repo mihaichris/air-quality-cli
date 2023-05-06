@@ -1,27 +1,57 @@
 {
-  "name": "minicli/application",
-  "description": "Minicli Application Template",
+  "name": "mihaichris/air-quality-cli",
+  "description": "🍃 Air Quality CLI",
   "license": "MIT",
-  "homepage": "https://github.com/minicli/application",
-  "keywords": ["cli","command-line", "template"],
+  "homepage": "https://github.com/mihaichris/air-quality-cli",
+  "keywords": [
+    "cli",
+    "command-line",
+    "air",
+    "quality"
+  ],
   "autoload": {
     "psr-4": {
       "App\\": "app/"
     }
   },
   "require": {
+    "php": "^8.2",
     "minicli/minicli": "^3.0",
-    "minicli/command-help": "^0.1.0"
+    "minicli/command-help": "^0.1.0",
+    "mihaichris/air-quality": "dev-main"
   },
   "require-dev": {
-    "pestphp/pest": "^1.21"
+    "pestphp/pest": "^1.21",
+    "infection/infection": "^0.26.21",
+    "laravel/pint": "^1.10",
+    "phpstan/phpstan": "^1.10.13",
+    "rector/rector": "^0.15.24",
+    "symfony/var-dumper": "^6.2.8"
   },
   "scripts": {
-    "test" : ["pest"]
+    "refactor": "rector --ansi",
+    "lint": "pint --ansi",
+    "fix": [
+      "@refactor",
+      "@lint"
+    ],
+    "test:refactor": "rector --dry-run --ansi",
+    "test:lint": "pint --test --ansi",
+    "test:types": "phpstan analyse --ansi",
+    "test:mutation": "infection --min-msi=90 --min-covered-msi=90 --threads=max --ansi",
+    "test:feature": "pest --testsuite=Feature",
+    "test": [
+      "@test:refactor",
+      "@test:lint",
+      "@test:types",
+      "@test:feature",
+      "@test:mutation"
+    ]
   },
   "config": {
     "allow-plugins": {
-      "pestphp/pest-plugin": true
+      "pestphp/pest-plugin": true,
+      "infection/extension-installer": true
     }
   }
 }

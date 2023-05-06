@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Command\Demo;
+namespace App\Command\AirQuality;
 
 use Minicli\Command\CommandController;
 
