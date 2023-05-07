@@ -59,19 +59,8 @@ jobs:
           path: ./coverage.xml
           retention-days: 1
 
-  coverage:
-    name: Upload coverage to Codecov
-    runs-on: ubuntu-latest
-    needs: test
-
-    steps:
-      - name: Download coverage report
-        uses: actions/download-artifact@v3
-        with:
-            path: ${{ github.workspace }}
-
-      - name: Upload to Codecov
-        uses: codecov/codecov-action@v3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          verbose: true
+    - name: Upload to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        verbose: true
