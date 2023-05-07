@@ -42,9 +42,9 @@ jobs:
       uses: shivammathur/setup-php@v2
       with:
         php-version: ${{ matrix.php }}
-        extensions: dom, mbstring, zip
-        tools: prestissimo
-        coverage: pcov
+        # extensions: dom, mbstring, zip
+        # tools: prestissimo
+        # coverage: pcov
 
     - name: Install Composer dependencies
       run: composer update --${{ matrix.dependency-version }} --no-interaction --prefer-dist
