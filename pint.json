@@ -1,4 +1,3 @@
 {
-    "preset": "psr12",
-    "lineEnding": ""
+    "preset": "psr12"
 }
