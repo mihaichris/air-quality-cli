@@ -340,12 +340,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mihaichris/air-quality.git",
-                "reference": "f36b53565b60ef7c94900026c51398cad049e59e"
+                "reference": "7ce32a5ebcf38d45f070833c38784e149a1acb71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mihaichris/air-quality/zipball/f36b53565b60ef7c94900026c51398cad049e59e",
-                "reference": "f36b53565b60ef7c94900026c51398cad049e59e",
+                "url": "https://api.github.com/repos/mihaichris/air-quality/zipball/7ce32a5ebcf38d45f070833c38784e149a1acb71",
+                "reference": "7ce32a5ebcf38d45f070833c38784e149a1acb71",
                 "shasum": ""
             },
             "require": {
@@ -389,7 +389,7 @@
                 "issues": "https://github.com/mihaichris/air-quality/issues",
                 "source": "https://github.com/mihaichris/air-quality/tree/main"
             },
-            "time": "2023-05-08T16:16:27+00:00"
+            "time": "2023-05-09T07:01:03+00:00"
         },
         {
             "name": "minicli/command-help",
