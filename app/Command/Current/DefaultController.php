@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Command\AirQuality;
+namespace App\Command\Current;
 
 use Air\Quality\AirQuality;
 use Minicli\Command\CommandController;
@@ -21,8 +21,8 @@ final class DefaultController extends CommandController
             $longitude = input('Longitude: ')->read();
         }
 
-        $airQuality = new AirQuality($latitude, $longitude);
-        $airQualityResponse = $airQuality->getNow();
+        $airQuality = new AirQuality((int)$latitude, (int)$longitude);
+        $airQualityResponse = $airQuality->setTimezone('Europe/Bucharest')->getNow();
         $tableHelper = new TableHelper();
         $tableHelper->addHeader(['datetime', ...array_keys($airQualityResponse->units), 'units']);
         foreach ($airQualityResponse->hourly as $dateTime => $values) {
