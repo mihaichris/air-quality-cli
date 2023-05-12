@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bd9856c650eb9059a8c1b9eba8c3852a",
+    "content-hash": "0d94fd2450a8405612ea5b9a7c4571c3",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -336,16 +336,16 @@
         },
         {
             "name": "mihaichris/air-quality",
-            "version": "dev-main",
+            "version": "v0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mihaichris/air-quality.git",
-                "reference": "7ce32a5ebcf38d45f070833c38784e149a1acb71"
+                "reference": "06a0c8d3e9fd55e3041183f45c7c0cca1f6efcbb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mihaichris/air-quality/zipball/7ce32a5ebcf38d45f070833c38784e149a1acb71",
-                "reference": "7ce32a5ebcf38d45f070833c38784e149a1acb71",
+                "url": "https://api.github.com/repos/mihaichris/air-quality/zipball/06a0c8d3e9fd55e3041183f45c7c0cca1f6efcbb",
+                "reference": "06a0c8d3e9fd55e3041183f45c7c0cca1f6efcbb",
                 "shasum": ""
             },
             "require": {
@@ -360,7 +360,6 @@
                 "rector/rector": "^0.15.24",
                 "symfony/var-dumper": "^6.2.8"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -387,49 +386,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mihaichris/air-quality/issues",
-                "source": "https://github.com/mihaichris/air-quality/tree/main"
+                "source": "https://github.com/mihaichris/air-quality/tree/v0.1.0"
             },
-            "time": "2023-05-09T07:01:03+00:00"
-        },
-        {
-            "name": "minicli/command-help",
-            "version": "0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/minicli/command-help.git",
-                "reference": "f8cbb80bad2aa2fc0896d1b8048e6098f0a18d87"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/minicli/command-help/zipball/f8cbb80bad2aa2fc0896d1b8048e6098f0a18d87",
-                "reference": "f8cbb80bad2aa2fc0896d1b8048e6098f0a18d87",
-                "shasum": ""
-            },
-            "require": {
-                "minicli/minicli": "^3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Command\\": "Command/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "A help command for Minicli",
-            "homepage": "https://github.com/minicli/command-help",
-            "keywords": [
-                "cli",
-                "command-line",
-                "minicli"
-            ],
-            "support": {
-                "issues": "https://github.com/minicli/command-help/issues",
-                "source": "https://github.com/minicli/command-help/tree/0.1"
-            },
-            "time": "2022-06-02T17:42:18+00:00"
+            "time": "2023-05-09T19:26:23+00:00"
         },
         {
             "name": "minicli/minicli",
@@ -2187,16 +2146,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.14",
+            "version": "1.10.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "d232901b09e67538e5c86a724be841bea5768a7c"
+                "reference": "762c4dac4da6f8756eebb80e528c3a47855da9bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/d232901b09e67538e5c86a724be841bea5768a7c",
-                "reference": "d232901b09e67538e5c86a724be841bea5768a7c",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/762c4dac4da6f8756eebb80e528c3a47855da9bd",
+                "reference": "762c4dac4da6f8756eebb80e528c3a47855da9bd",
                 "shasum": ""
             },
             "require": {
@@ -2245,7 +2204,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-04-19T13:47:27+00:00"
+            "time": "2023-05-09T15:28:01+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -2567,16 +2526,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.6.7",
+            "version": "9.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "c993f0d3b0489ffc42ee2fe0bd645af1538a63b2"
+                "reference": "17d621b3aff84d0c8b62539e269e87d8d5baa76e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c993f0d3b0489ffc42ee2fe0bd645af1538a63b2",
-                "reference": "c993f0d3b0489ffc42ee2fe0bd645af1538a63b2",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/17d621b3aff84d0c8b62539e269e87d8d5baa76e",
+                "reference": "17d621b3aff84d0c8b62539e269e87d8d5baa76e",
                 "shasum": ""
             },
             "require": {
@@ -2650,7 +2609,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.6.7"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.6.8"
             },
             "funding": [
                 {
@@ -2666,7 +2625,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-04-14T08:58:40+00:00"
+            "time": "2023-05-11T05:14:45+00:00"
         },
         {
             "name": "psr/container",
@@ -5042,9 +5001,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "mihaichris/air-quality": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
