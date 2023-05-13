@@ -5,7 +5,7 @@ use Minicli\Command\CommandCall;
 
 function getCommandsPath(): string
 {
-    return __DIR__.'/../app/Command';
+    return __DIR__ . '/../app/Command';
 }
 
 function getApp(): App
@@ -29,5 +29,5 @@ function getProdApp(): App
 
 function getCommandCall(array $parameters = null): CommandCall
 {
-    return new CommandCall(array_merge(['minicli'], $parameters));
+    return new CommandCall(array_merge(['air-quality'], $parameters));
 }
