@@ -4,7 +4,6 @@ namespace App\Command\Help;
 
 use App\Controller\AbstractCommandController;
 use Minicli\App;
-use Minicli\Command\CommandController;
 
 final class DefaultController extends AbstractCommandController
 {
@@ -25,8 +24,7 @@ final class DefaultController extends AbstractCommandController
             $this->output($command, 'info_alt', true);
             foreach ($sub as $subcommand) {
                 if ($subcommand !== 'default') {
-                    $this->getPrinter()->newline();
-                    $this->getPrinter()->out(sprintf('%s%s', '└──', $subcommand));
+                    $this->output(sprintf('%s%s', '└──', $subcommand), newLine: true);
                 }
             }
 
