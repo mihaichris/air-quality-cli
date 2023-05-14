@@ -5,3 +5,4 @@ infection.log
 vendor/
 build/
 coverage.xml
+infection.json5

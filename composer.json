@@ -12,7 +12,10 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/"
-        }
+        },
+        "files": [
+            "app/helpers.php"
+        ]
     },
     "require": {
         "php": "^8.2",
@@ -39,7 +42,7 @@
         "test:types": "phpstan analyse --ansi",
         "test:mutation": "infection --min-msi=90 --min-covered-msi=90 --threads=max --ansi",
         "test:coverage:clover": "pest --coverage-clover ./coverage.xml",
-        "test:feature": "pest --testsuite=Feature --parallel --compact",
+        "test:feature": "pest --testsuite=Feature --compact",
         "test": [
             "@test:refactor",
             "@test:lint",
