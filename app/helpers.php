@@ -4,28 +4,43 @@ declare(strict_types=1);
 
 use Minicli\Input;
 
-function config_default(string $config_dir): array
+/**
+ * @return array<string, mixed[]>
+ */
+function config_default(string $configDir): array
 {
     $config = [];
 
-    foreach (glob($config_dir . '/*.php') as $config_file) {
-        $config_data = include $config_file;
-        if (is_array($config_data)) {
-            $config = array_merge($config, $config_data);
+    /** @var array<string, mixed[]> $pathnames */
+    $pathnames = glob($configDir . '/*.php');
+    foreach ($pathnames as $pathname) {
+        $configData = include $pathname;
+        if (is_array($configData)) {
+            $config = array_merge($config, $configData);
         }
     }
 
     return $config;
 }
 
+/**
+ * @return array<string, mixed[]>
+ */
 function load_config(): array
 {
-    return array_merge(config_default(__DIR__ . '/../config'), include __DIR__ . '/../config.php');
+    return config_default(__DIR__ . '/../config');
 }
 
 function env(string $key, string $defaultValue = null): string|null
 {
-    return getenv($key) ? getenv($key) : $defaultValue;
+    return getenv($key) ?: $defaultValue;
+}
+
+function config(string $key): mixed
+{
+    $config = load_config();
+
+    return $config[$key] ?? null;
 }
 
 function input(string $prompt = 'Input Value:'): \Minicli\Input
