@@ -24,6 +24,8 @@
 |
 */
 
+use Minicli\App;
+
 expect()->extend('toBeOne', function () {
     return $this->toBe(1);
 });
@@ -39,7 +41,7 @@ expect()->extend('toBeOne', function () {
 |
 */
 
-function app()
+function app(): App
 {
-    return getApp();
+    return new App(config_default(__DIR__ . '/../config'));
 }
