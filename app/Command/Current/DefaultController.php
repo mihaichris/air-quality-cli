@@ -3,6 +3,7 @@
 namespace App\Command\Current;
 
 use Air\Quality\AirQuality;
+use InvalidArgumentException;
 use Minicli\Command\CommandController;
 use Minicli\Output\Filter\ColorOutputFilter;
 use Minicli\Output\Helper\TableHelper;
@@ -14,11 +15,11 @@ final class DefaultController extends CommandController
         $latitude = $this->getParam('latitude');
         $longitude = $this->getParam('longitude');
         if ($latitude === null) {
-            $latitude = input('Latitude: ')->read();
+            throw new InvalidArgumentException('Latitude param not provided.');
         }
 
         if ($longitude === null) {
-            $longitude = input('Longitude: ')->read();
+            throw new InvalidArgumentException('Longitute param not provided.');
         }
 
         $airQuality = new AirQuality((int)$latitude, (int)$longitude);
