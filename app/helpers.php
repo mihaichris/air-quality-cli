@@ -31,18 +31,6 @@ function load_config(): array
     return config_default(__DIR__ . '/../config');
 }
 
-function env(string $key, string $defaultValue = null): string|null
-{
-    return getenv($key) ?: $defaultValue;
-}
-
-function config(string $key): mixed
-{
-    $config = load_config();
-
-    return $config[$key] ?? null;
-}
-
 function input(string $prompt = 'Input Value:'): \Minicli\Input
 {
     return new Input($prompt);
