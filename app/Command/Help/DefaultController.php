@@ -19,7 +19,7 @@ final class DefaultController extends AbstractCommandController
     public function handle(): void
     {
         $this->getPrinter()->info('Available Commands: ');
-        foreach ($this->commandMap as $command => $sub) {
+        foreach (array_keys($this->commandMap) as $command) {
             $this->getPrinter()->newline();
             $this->output($command, 'info_alt', true);
             $this->getPrinter()->newline();

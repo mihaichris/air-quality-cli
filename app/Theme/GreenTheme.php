@@ -5,8 +5,11 @@ namespace App\Theme;
 use Minicli\Output\Theme\DefaultTheme;
 use Minicli\Output\CLIColors;
 
-class GreenTheme extends DefaultTheme
+final class GreenTheme extends DefaultTheme
 {
+    /**
+     * @return array{default: mixed[], alt: mixed[], info: mixed[], info_alt: mixed[]}
+     */
     public function getThemeColors(): array
     {
         return [
