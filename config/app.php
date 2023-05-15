@@ -9,6 +9,6 @@ return [
     'app_path' => [
         __DIR__ . '/../app/Command',
     ],
-    'theme' => '\Unicorn',
+    'theme' => 'App\Theme\Green',
     'debug' => true
 ];
