@@ -22,12 +22,6 @@ final class DefaultController extends AbstractCommandController
         foreach ($this->commandMap as $command => $sub) {
             $this->getPrinter()->newline();
             $this->output($command, 'info_alt', true);
-            foreach ($sub as $subcommand) {
-                if ($subcommand !== 'default') {
-                    $this->output(sprintf('%s%s', '└──', $subcommand));
-                }
-            }
-
             $this->getPrinter()->newline();
         }
     }
