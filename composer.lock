@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3ff71a0fbdcf0e841237e0c519d64160",
+    "content-hash": "da5194102abcd94e13737fda667b4420",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -333,16 +333,16 @@
         },
         {
             "name": "mihaichris/air-quality",
-            "version": "dev-main",
+            "version": "v0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mihaichris/air-quality.git",
-                "reference": "80de7c3aec7ad073014a906491872cedba62e24d"
+                "reference": "5940282ac7731f8ec68d5a8039e35febe9b1aa5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mihaichris/air-quality/zipball/80de7c3aec7ad073014a906491872cedba62e24d",
-                "reference": "80de7c3aec7ad073014a906491872cedba62e24d",
+                "url": "https://api.github.com/repos/mihaichris/air-quality/zipball/5940282ac7731f8ec68d5a8039e35febe9b1aa5f",
+                "reference": "5940282ac7731f8ec68d5a8039e35febe9b1aa5f",
                 "shasum": ""
             },
             "require": {
@@ -357,7 +357,6 @@
                 "rector/rector": "^0.15.24",
                 "symfony/var-dumper": "^6.2.8"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -384,9 +383,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mihaichris/air-quality/issues",
-                "source": "https://github.com/mihaichris/air-quality/tree/main"
+                "source": "https://github.com/mihaichris/air-quality/tree/v0.2.1"
             },
-            "time": "2023-05-16T14:57:02+00:00"
+            "time": "2023-05-17T15:21:38+00:00"
         },
         {
             "name": "minicli/minicli",
@@ -2600,22 +2599,23 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.20.4",
+            "version": "1.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "7d568c87a9df9c5f7e8b5f075fc469aa8cb0a4cd"
+                "reference": "6df62b08faef4f899772bc7c3bbabb93d2b7a21c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/7d568c87a9df9c5f7e8b5f075fc469aa8cb0a4cd",
-                "reference": "7d568c87a9df9c5f7e8b5f075fc469aa8cb0a4cd",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/6df62b08faef4f899772bc7c3bbabb93d2b7a21c",
+                "reference": "6df62b08faef4f899772bc7c3bbabb93d2b7a21c",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2 || ^8.0"
             },
             "require-dev": {
+                "nikic/php-parser": "^4.15",
                 "php-parallel-lint/php-parallel-lint": "^1.2",
                 "phpstan/extension-installer": "^1.0",
                 "phpstan/phpstan": "^1.5",
@@ -2639,9 +2639,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.20.4"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.21.0"
             },
-            "time": "2023-05-02T09:19:37+00:00"
+            "time": "2023-05-17T13:13:44+00:00"
         },
         {
             "name": "phpstan/phpstan",
@@ -5505,9 +5505,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "mihaichris/air-quality": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
