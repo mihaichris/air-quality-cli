@@ -1,6 +1,5 @@
 <?php
 
-
 test('execute without latitude params will throw exception', function () {
     app()->runCommand(['air-quality', 'current', 'longitude=26.14']);
 })->expectExceptionMessage('Latitude param not provided.');
