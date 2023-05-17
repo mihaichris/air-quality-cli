@@ -17,13 +17,9 @@ test('execute with params will not ask for prompts', function () {
     app()->runCommand(['air-quality', 'current', 'latitude=44.38', 'longitude=26.14']);
 })->expectNotToPerformAssertions();
 
-test('execute with params and not filter will return table with datetime column and units column', function () {
-    app()->runCommand(['air-quality', 'current', 'latitude=44.38', 'longitude=26.14']);
-})->expectOutputRegex('/(datetime)|(units)/');
-
 test('execute with params and not filter will return table with all weather variables', function () {
     app()->runCommand(['air-quality', 'current', 'latitude=44.38', 'longitude=26.14']);
-    $weatherVariables = ['pm10', 'pm2_5', 'carbon_monoxide', 'nitrogen_dioxide', 'sulphur_dioxide', 'ozone', 'aerosol_optical_depth', 'dust', 'uv_index', 'uv_index_clear_sky', 'ammonia', 'alder_pollen', 'birch_pollen', 'grass_pollen', 'mugwort_pollen', 'olive_pollen', 'ragweed_pollen'];
+    $weatherVariables = ['Particulate Matter (PM10)', 'Particulate Matter (PM2.5)', 'Carbon Monoxide', 'Nitrogen Dioxide', 'Sulphur Dioxide', 'Ozone', 'Aerosol Optical Depth', 'Dust', 'UV Index', 'UV Index Clear Sky', 'Ammonia', 'Alder Pollen', 'Birch Pollen', 'Grass Pollen', 'Mugwort Pollen', 'Olive Pollen', 'Ragweed Pollen'];
     $expectOutputRegex = [];
     foreach ($weatherVariables as $weatherVariable) {
         $expectOutputRegex[] = '(' . $weatherVariable . ')';

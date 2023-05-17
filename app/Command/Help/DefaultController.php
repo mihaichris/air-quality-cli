@@ -2,10 +2,10 @@
 
 namespace App\Command\Help;
 
-use App\Controller\AbstractCommandController;
 use Minicli\App;
+use Minicli\Command\CommandController;
 
-final class DefaultController extends AbstractCommandController
+final class DefaultController extends CommandController
 {
     /** @var array<string, array<string, string>> */
     private array $commandMap = [];
@@ -20,9 +20,7 @@ final class DefaultController extends AbstractCommandController
     {
         $this->getPrinter()->info('Available Commands: ');
         foreach (array_keys($this->commandMap) as $command) {
-            $this->getPrinter()->newline();
-            $this->output($command, 'info_alt', true);
-            $this->getPrinter()->newline();
+            $this->getPrinter()->info($command);
         }
     }
 }

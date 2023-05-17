@@ -5,8 +5,6 @@ namespace App\Command\Current;
 use Air\Quality\AirQuality;
 use InvalidArgumentException;
 use Minicli\Command\CommandController;
-use Minicli\Output\Filter\ColorOutputFilter;
-use Minicli\Output\Helper\TableHelper;
 
 final class DefaultController extends CommandController
 {
@@ -24,14 +22,13 @@ final class DefaultController extends CommandController
 
         $airQuality = new AirQuality((int)$latitude, (int)$longitude);
         $airQualityResponse = $airQuality->setTimezone('Europe/Bucharest')->getNow();
-        $tableHelper = new TableHelper();
-        $tableHelper->addHeader(['datetime', ...array_keys($airQualityResponse->units), 'units']);
-        foreach ($airQualityResponse->hourly as $dateTime => $values) {
-            $tableHelper->addRow([$dateTime, ...array_map('strval', array_values($values)), '']);
+        $this->getPrinter()->newline();
+        foreach ($airQualityResponse->hourly as $values) {
+            foreach ($values as $weatherVariable => $value) {
+                $unit = $airQualityResponse->units[$weatherVariable];
+                $this->getPrinter()->out($weatherVariable . ': ' . ($value ?? 'NA') . ' ' . $unit, 'green');
+                $this->getPrinter()->newline();
+            }
         }
-
-        $this->getPrinter()->newline();
-        $this->getPrinter()->rawOutput($tableHelper->getFormattedTable(new ColorOutputFilter()));
-        $this->getPrinter()->newline();
     }
 }
