@@ -1,4 +1,4 @@
-# 🍃 Air Quality API
+# 🍃 Air Quality CLI
 
 <p align="center">
     <img src="./docs/cover.png" height="300" alt="Air Quality">
