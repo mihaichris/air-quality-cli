@@ -1,5 +1,27 @@
 # Changelog
 
+## v0.1.4 - 2023-05-18
+
+### Added
+
+- Nothing.
+
+### Changed
+
+- Nothing.
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- file path for autoloader
+
 ## v0.1.3 - 2023-05-18
 
 ### Added
