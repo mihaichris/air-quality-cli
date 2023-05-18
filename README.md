@@ -12,13 +12,26 @@
 
 
 # Description
- 
+ Air Quality CLI is a small CLI tool that is powered by [air-quality](https://github.com/mihaichris/air-quality) PHP package. Provide de coordinates of the location you want and retrieve the weather variables of that point location.
 
 # 🚀 Installation
+To install the CLI you can download the repository and run `air-quality` script or you can install it through [atelier](https://github.com/mihaichris/atelier) scoop bucker:
 
+```powershell
+scoop bucket add atelier https://github.com/mihaichris/atelier
+```
+
+To install, do:
+```powershell
+scoop install atelier/air-quality-cli
+```
 
 # Basic Usage
 
+```powershell
+# Get current air quality from Bucharest
+./air-quality current latitude=44.38 longitude=26.14
+```
 
 # 👨‍💻 Author
 Mihai-Cristian Făgădău
