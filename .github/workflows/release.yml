@@ -24,7 +24,7 @@ jobs:
 
             - name: "Create Checksum SHA256 files"
               run: |
-                zip -r ../air-quality-cli.zip .
+                zip -r air-quality-cli.zip .
                 sha256sum air-quality-cli.zip > air-quality-cli_${{ github.ref_name }}_checksum.sha256
 
             - name: Create GitHub Release
