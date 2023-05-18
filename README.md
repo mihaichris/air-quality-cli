@@ -37,7 +37,7 @@ scoop install atelier/air-quality-cli
 Mihai-Cristian Făgădău
  * Github: [@mihaichris](https://github.com/mihaichris)
  * LinkedIn: [in/mihai-fagadau](https://www.linkedin.com/in/mihai-fagadau/)
- * Website: [mihaifagadau.dev](mihaifagadau.dev)
+ * Website: [mihaifagadau.dev](https://mihaifagadau.dev)
 
 # 🤝 Contributing
 Contributing details can be found at [here](./CONTRIBUTING.md).
