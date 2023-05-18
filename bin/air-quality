@@ -5,12 +5,14 @@ if (php_sapi_name() !== 'cli') {
     exit;
 }
 
-require __DIR__ . '/vendor/autoload.php';
+$rootPath = dirname(__DIR__);
+
+require $rootPath . '/vendor/autoload.php';
 
 use Minicli\App;
 use Minicli\Exception\CommandNotFoundException;
 
-$app = new App(config_default(__DIR__ . '/config'));
+$app = new App(config_default($rootPath . '/config'));
 $app->setSignature('
      _    ___ ____     ___              _ _ _
     / \  |_ _|  _ \   / _ \ _   _  __ _| (_) |_ _   _
