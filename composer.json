@@ -57,5 +57,8 @@
             "pestphp/pest-plugin": true,
             "infection/extension-installer": true
         }
-    }
+    },
+    "bin": [
+        "bin/air-quality"
+    ]
 }
