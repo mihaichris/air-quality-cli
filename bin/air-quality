@@ -7,6 +7,10 @@ if (php_sapi_name() !== 'cli') {
 
 $rootPath = dirname(__DIR__);
 
+if (!is_file($rootPath . '/vendor/autoload.php')) {
+    $rootPath = dirname(__DIR__, 4);
+}
+
 require $rootPath . '/vendor/autoload.php';
 
 use Minicli\App;
