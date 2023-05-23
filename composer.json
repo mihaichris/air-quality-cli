@@ -19,7 +19,7 @@
     },
     "require": {
         "php": "^8.2",
-        "minicli/minicli": "^3.0",
+        "minicli/minicli": "^4.0",
         "mihaichris/air-quality": "^0.2.1"
     },
     "require-dev": {
