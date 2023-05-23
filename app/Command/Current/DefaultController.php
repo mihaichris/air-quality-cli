@@ -22,12 +22,11 @@ final class DefaultController extends CommandController
 
         $airQuality = new AirQuality((int)$latitude, (int)$longitude);
         $airQualityResponse = $airQuality->setTimezone('Europe/Bucharest')->getNow();
-        $this->getPrinter()->newline();
         foreach ($airQualityResponse->hourly as $values) {
             foreach ($values as $weatherVariable => $value) {
                 $unit = $airQualityResponse->units[$weatherVariable];
-                $this->getPrinter()->out($weatherVariable . ': ' . ($value ?? 'NA') . ' ' . $unit, 'green');
-                $this->getPrinter()->newline();
+                $this->out($weatherVariable . ': ' . ($value ?? 'NA') . ' ' . $unit, 'green');
+                $this->newline();
             }
         }
     }

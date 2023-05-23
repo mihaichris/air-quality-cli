@@ -7,7 +7,7 @@ use Minicli\Command\CommandController;
 
 final class DefaultController extends CommandController
 {
-    /** @var array<string, array<string, string>> */
+    /** @var array<string, callable|array<string>> */
     private array $commandMap = [];
 
     public function boot(App $app): void
@@ -18,9 +18,9 @@ final class DefaultController extends CommandController
 
     public function handle(): void
     {
-        $this->getPrinter()->info('Available Commands: ');
+        $this->info('Available Commands: ');
         foreach (array_keys($this->commandMap) as $command) {
-            $this->getPrinter()->info($command);
+            $this->info($command);
         }
     }
 }
