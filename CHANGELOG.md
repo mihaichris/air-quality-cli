@@ -4,11 +4,11 @@
 
 ### Added
 
-- Nothing.
+- [#2](https://github.com/mihaichris/air-quality-cli/pull/2) Between dates command
 
 ### Changed
 
-- Nothing.
+- air-quality package version
 
 ### Deprecated
 
