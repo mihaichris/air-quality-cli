@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Command\Current;
+namespace App\Command\Between;
 
 use Air\Quality\AirQuality;
 use InvalidArgumentException;
@@ -17,14 +17,12 @@ final class DefaultController extends CommandController
         if ($latitude === null) {
             throw new InvalidArgumentException('Latitude param not provided.');
         }
-
         if ($longitude === null) {
             throw new InvalidArgumentException('Longitute param not provided.');
         }
         if ($startDate === null) {
             throw new InvalidArgumentException('start_date param not provided.');
         }
-
         if ($endDate === null) {
             throw new InvalidArgumentException('end_date param not provided.');
         }
