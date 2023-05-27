@@ -1,5 +1,27 @@
 # Changelog
 
+## v0.2.0 - 2023-05-27
+
+### Added
+
+- [#2](https://github.com/mihaichris/air-quality-cli/pull/2) Between dates command
+
+### Changed
+
+- air-quality package version
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- Nothing.
+
 ## v0.1.5 - 2023-05-18
 
 ### Added

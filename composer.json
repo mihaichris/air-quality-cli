@@ -20,7 +20,7 @@
     "require": {
         "php": "^8.2",
         "minicli/minicli": "^4.0",
-        "mihaichris/air-quality": "^0.2.1"
+        "mihaichris/air-quality": "^0.2.2"
     },
     "require-dev": {
         "pestphp/pest": "^2.6.1",
