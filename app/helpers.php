@@ -23,14 +23,6 @@ function config_default(string $configDir): array
     return $config;
 }
 
-/**
- * @return array<string, mixed[]>
- */
-function load_config(): array
-{
-    return config_default(__DIR__ . '/../config');
-}
-
 function input(string $prompt = 'Input Value:'): \Minicli\Input
 {
     return new Input($prompt);
