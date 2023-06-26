@@ -8,6 +8,7 @@ return [
      *****************************************************************************/
     'app_path' => [
         __DIR__ . '/../app/Command',
+        '@minicli/command-help'
     ],
     'theme' => 'App\Theme\Green',
     'debug' => true
