@@ -10,16 +10,16 @@ final class DefaultController extends CommandController
 {
     public function handle(): void
     {
-        $latitude = $this->getParam('latitude');
-        $longitude = $this->getParam('longitude');
-        if ($latitude === null) {
+        if (!$this->hasParam('latitude')) {
             throw new InvalidArgumentException('Latitude param not provided.');
         }
 
-        if ($longitude === null) {
+        if (!$this->hasParam('longitude')) {
             throw new InvalidArgumentException('Longitute param not provided.');
         }
 
+        $latitude = $this->getParam('latitude');
+        $longitude = $this->getParam('longitude');
         $airQuality = new AirQuality((int)$latitude, (int)$longitude);
         $airQualityResponse = $airQuality->setTimezone('Europe/Bucharest')->getNow();
         foreach ($airQualityResponse->hourly as $values) {
