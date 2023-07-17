@@ -1,5 +1,27 @@
 # Changelog
 
+## v0.3.0 - 
+
+### Added
+
+- [#3](https://github.com/mihaichris/air-quality-cli/pull/3) Get forecast command
+
+### Changed
+
+- Nothing.
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- Nothing.
+
 ## v0.2.0 - 2023-05-27
 
 ### Added
