@@ -48,4 +48,4 @@ test('execute with params and filtered by ozone will return table with only ozon
 test('execute with params and filtered by non valid weather variable will throw exception', function () {
     /** @var TestCase $this */
     app()->runCommand(['air-quality', 'next', 'variables=test', 'latitude=44.38', 'longitude=26.14']);
-})->expectException(InvalidArgumentException::class);;
+})->expectException(InvalidArgumentException::class);
