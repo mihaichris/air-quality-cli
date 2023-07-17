@@ -28,6 +28,8 @@ use Rector\Privatization\Rector\Class_\ChangeGlobalVariablesToPropertiesRector;
 use Rector\Privatization\Rector\Property\ChangeReadOnlyPropertyWithDefaultValueToConstantRector;
 use Rector\Set\ValueObject\LevelSetList;
 use Rector\Set\ValueObject\SetList;
+use Rector\TypeDeclaration\Rector\ArrowFunction\AddArrowFunctionReturnTypeRector;
+use Rector\TypeDeclaration\Rector\Closure\AddClosureReturnTypeRector;
 
 return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->paths([
@@ -58,6 +60,8 @@ return static function (RectorConfig $rectorConfig): void {
         Utf8DecodeEncodeToMbConvertEncodingRector::class,
         ChangeGlobalVariablesToPropertiesRector::class,
         ChangeReadOnlyPropertyWithDefaultValueToConstantRector::class,
+        AddArrowFunctionReturnTypeRector::class,
+        AddClosureReturnTypeRector::class
     ]);
 
     $rectorConfig->sets([
@@ -69,5 +73,6 @@ return static function (RectorConfig $rectorConfig): void {
         SetList::PRIVATIZATION,
         SetList::CODING_STYLE,
         SetList::NAMING,
+        SetList::PRIVATIZATION
     ]);
 };
