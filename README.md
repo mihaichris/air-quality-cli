@@ -29,6 +29,9 @@ air-quality.bat current latitude=44.38 longitude=26.14
 
 # Get air quality from Bucharest between two dates
 air-quality.bat between latitude=44.38 longitude=26.14 start_date=2023-05-26 end_date=2023-05-27
+
+# Get forecast air quality from Bucharest
+air-quality.bat next days=2 latitude=44.38 longitude=26.14
 ```
 
 # 👨‍💻 Author
