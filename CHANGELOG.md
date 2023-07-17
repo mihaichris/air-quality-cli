@@ -4,7 +4,7 @@
 
 ### Added
 
-- [#3](https://github.com/mihaichris/air-quality-cli/pull/3) Get forecast command
+- [#6](https://github.com/mihaichris/air-quality-cli/pull/7) - Get forecast command
 
 ### Changed
 
