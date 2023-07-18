@@ -1,10 +1,12 @@
 # Changelog
 
-## v0.3.0 - 
+## v0.4.0 - 
 
 ### Added
 
 - [#6](https://github.com/mihaichris/air-quality-cli/pull/7) - Get forecast command
+- [#9](https://github.com/mihaichris/air-quality-cli/pull/9) - Added extra rules
+- [#11](https://github.com/mihaichris/air-quality-cli/pull/11) - Create logging config
 
 ### Changed
 
