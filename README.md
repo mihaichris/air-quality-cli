@@ -32,6 +32,9 @@ air-quality.bat between latitude=44.38 longitude=26.14 start_date=2023-05-26 end
 
 # Get forecast air quality from Bucharest
 air-quality.bat next days=2 latitude=44.38 longitude=26.14
+
+# Get forecast air quality from Bucharest filtered by grass pollen
+air-quality.bat next days=2 variables=grass_pollen latitude=44.38 longitude=26.14
 ```
 
 # 👨‍💻 Author
