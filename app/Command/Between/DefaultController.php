@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Command\Between;
 
 use Air\Quality\AirQuality;
@@ -27,7 +29,21 @@ final class DefaultController extends CommandController
             throw new InvalidArgumentException('End date param not provided.');
         }
 
-        $airQuality = new AirQuality((int)$this->getParam('latitude'), (int)$this->getParam('longitude'));
+        $airQuality = new AirQuality((float)$this->getParam('latitude'), (float)$this->getParam('longitude'));
+
+        if ($this->hasParam('variables')) {
+            $weatherVariables = explode(',', (string)$this->getParam('variables'));
+            $availableWeatherVariables =  array_keys($airQuality->getWeatherVariables());
+            $invalidWeatherVariables = array_filter($weatherVariables, static fn (string $weatherVariable): bool => !in_array($weatherVariable, $availableWeatherVariables));
+            if ($invalidWeatherVariables !== []) {
+                throw new InvalidArgumentException('Input weather variables are not valid: ' . implode(',', $invalidWeatherVariables));
+            }
+        }
+
+        if (!empty($weatherVariables)) {
+            $airQuality->with($weatherVariables);
+        }
+
         $airQualityResponse = $airQuality->setTimezone('Europe/Bucharest')->getBetweenDates((string)$this->getParam('start_date'), (string)$this->getParam('end_date'));
         $tableHelper = new TableHelper();
         $tableHelper->addHeader(['Date', ...array_keys($airQualityResponse->units)]);

@@ -1,9 +1,11 @@
 # Changelog
 
-## v0.4.0 - 
+## v0.6.0 - 2023-07-18
 
 ### Added
 
+- [#12](https://github.com/mihaichris/air-quality-cli/pull/12) - Add variables filter on all commands
+- [#11](https://github.com/mihaichris/air-quality-cli/pull/11) - Create logging config
 - [#6](https://github.com/mihaichris/air-quality-cli/pull/7) - Get forecast command
 - [#9](https://github.com/mihaichris/air-quality-cli/pull/9) - Added extra rules
 - [#11](https://github.com/mihaichris/air-quality-cli/pull/11) - Create logging config

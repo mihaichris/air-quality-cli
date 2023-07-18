@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     /****************************************************************************
      * Air Quality Settings
@@ -11,5 +13,5 @@ return [
         '@minicli/command-help'
     ],
     'theme' => 'App\Theme\Green',
-    'debug' => true
+    'debug' => true,
 ];
