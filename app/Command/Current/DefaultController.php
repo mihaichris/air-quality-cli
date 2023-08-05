@@ -39,9 +39,32 @@ final class DefaultController extends CommandController
         foreach ($airQualityResponse->hourly as $values) {
             foreach ($values as $weatherVariable => $value) {
                 $unit = $airQualityResponse->units[$weatherVariable];
-                $this->out($weatherVariable . ': ' . ($value ?? 'NA') . ' ' . $unit, 'green');
+                if ($weatherVariable === 'European Air Quality Index (AQI)') {
+                    $color = $this->getColourBasedOnWeatherValue($value);
+                    $this->newline();
+                    $this->out($weatherVariable . ': ' . ($value ?? 'NA') . ' ' . $unit, $color);
+                } else {
+                    $this->out($weatherVariable . ': ' . ($value ?? 'NA') . ' ' . $unit, 'green');
+                }
+
                 $this->newline();
             }
         }
+    }
+
+    public function getColourBasedOnWeatherValue(?float $value): string
+    {
+        $color = 'blue';
+        if ($value >= 10) {
+            $color = 'green';
+        } elseif ($value >= 20) {
+            $color = 'yellow';
+        } elseif ($value >= 25) {
+            $color = 'red';
+        } elseif ($value >= 75) {
+            $color = 'purple';
+        }
+
+        return $color;
     }
 }
