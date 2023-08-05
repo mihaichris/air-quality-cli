@@ -1,5 +1,27 @@
 # Changelog
 
+## v0.7.0 - 2023-08-05
+
+### Added
+
+- [#5](https://github.com/mihaichris/air-quality-cli/pull/14) - Display European Air Quality Index for current air quality
+
+### Changed
+
+- Nothing.
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- Nothing.
+
 ## v0.6.0 - 2023-07-18
 
 ### Added
@@ -8,7 +30,6 @@
 - [#11](https://github.com/mihaichris/air-quality-cli/pull/11) - Create logging config
 - [#6](https://github.com/mihaichris/air-quality-cli/pull/7) - Get forecast command
 - [#9](https://github.com/mihaichris/air-quality-cli/pull/9) - Added extra rules
-- [#11](https://github.com/mihaichris/air-quality-cli/pull/11) - Create logging config
 
 ### Changed
 
